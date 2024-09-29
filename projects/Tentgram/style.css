@@ -1,0 +1,411 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poiret One", sans-serif;
+}
+
+:root {
+  --primary-color-dark: #34b72d;
+  --secondary-color: #e0efff;
+  --text-dark: #093855;
+  --text-light: #a77800;
+  --extra-light: #ffffff;
+
+  --max-width: 1200px;
+}
+
+nav{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo a{
+  text-decoration: none;
+  color: var(--extra-light);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.nav-logo a:hover{
+  color: black;
+  transition: ease-in-out 0.5s;
+}
+.nav-links {
+  display: none;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link:hover{
+  transition: ease-in-out 0.5s;
+  color: black;
+}
+
+header{
+  height: 100vh;
+  background-image: linear-gradient(to bottom right,
+      rgba(255, 0, 0, 0.605),
+      rgba(45, 92, 132, 0.5)
+    ),
+    url("https://www.travelturtle.world/wp-content/uploads/2024/03/6585d85934a171a9a052c170_traveling-based-on-fare-deals.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .section-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+}
+
+.header-content h1{
+
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 5rem;
+}
+
+.header-content p {
+  text-align: center;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.header-content button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(173, 127, 127, 0.592);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.header-content button:hover{
+  background-color: var(--primary-color-dark);
+}
+
+
+.section-container{
+  padding: 5rem 1rem;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgb(42, 144, 204);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: rgb(179, 144, 144);
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  border-radius: 50px;
+}
+.journey-container {
+  background-color: rgba(255, 199, 199, 0.411);
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.place-card {
+  background-color: rgba(245, 222, 179, 0);
+  font-weight: 800;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.place-card:hover{
+  background-color:  rgba(255, 199, 199, 0.727);
+  transition: ease-in-out 0.5s;
+}
+.place-name i {
+  font-size: 1.2rem;
+}
+
+.place-name span {
+  font-style: italic;
+}
+
+
+
+.banner-container {
+  background-image: linear-gradient(
+      rgba(35, 71, 103, 0.5),
+      rgba(35, 71, 103, 0.5)
+    ),
+    url("assets/bg-2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-container .section-container {
+  padding: 10rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.disc-content {
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  color: var(--extra-light);
+}
+
+.disc-content h2 {
+  margin-left: -20%;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.disc-content button {
+  margin-left: -20%;
+  padding: 0.5rem 2rem;
+  border: 1px solid;
+  border-radius: 50px;
+  background-color: transparent;
+  color:white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.disc-content button a{
+  text-decoration: none;
+  color: white;
+}
+.disc-content button:hover {
+  background-color: var(--primary-color-dark);
+  transition: ease-in-out 0.3s;
+}
+
+
+
+
+
+.display-container {
+  background-color:rgba(120, 205, 206, 0.699);
+  font-weight: 800;
+}
+
+.display-container :is(.section-title, .section-subtitle) {
+  color: var(--text-dark);
+}
+
+.display-grid {
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.display-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: transparent;
+  text-align: center;
+}
+
+.display-card i{
+  
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.display-card h4 {
+  font-weight: 800;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 1rem;
+  color: var(--text-dark);
+}
+.display-card h4{
+  font-weight: 800;
+}
+
+.display-card p{
+  font-size: 0.8rem;
+  padding: 0 1rem;
+  color: var(--text-dark);
+}
+
+.display-grid .grid-1 {
+  grid-area: 1/1/3/3;
+}
+
+footer {
+  background-color: var(--text-dark);
+  color: var(--secondary-color);
+}
+
+footer .section-container {
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.socia-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons i {
+  color: rgba(255, 255, 255, 0.448);
+  padding: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.social-icons i:hover{
+  color: white;
+  transition: ease-in-out 0.5s;
+}
+
+footer p {
+  font-style: italic;
+  font-size: 20px;
+}
+
+@media (min-width: 640px) {
+  .nav-links {
+    display: flex;
+  }
+
+  header .section-container {
+    justify-content: flex-start;
+  }
+
+  .header-content {
+    max-width: 400px;
+    align-items: flex-start;
+  }
+
+  .marquee{
+    text-align: center;
+  }
+  .header-content p {
+    text-align: left;
+  }
+
+  .journey-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .display-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .display-card {
+    gap: 0;
+  }
+
+  .display-card i {
+    font-size: 1.75rem;
+  }
+
+  .display-card h4 {
+    font-size: 1rem;
+  }
+
+  .display-card p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 786px) {
+  .banner-container .section-container {
+    justify-content: flex-end;
+  }
+
+  .banner-content {
+    align-items: flex-end;
+    text-align: right;
+    max-width: 800px;
+  }
+
+  .display-card {
+    gap: 0.5rem;
+  }
+
+  .display-card i {
+    font-size: 2.5rem;
+  }
+
+  .display-card p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .display-card {
+    gap: 1rem;
+  }
+
+  .display-card i {
+    font-size: 3rem;
+  }
+
+  .display-card h4 {
+    font-size: 1.5rem;
+  }
+
+  .display-card p {
+    font-size: 1rem;
+  }
+}
